@@ -5,7 +5,7 @@ import secrets
 import requests
 from pandas._libs.tslibs.offsets import Any
 
-
+import mysql.connector
 
 #def get_data():df = pd.read_csv('data.csv')
 #def df = pd.read_json('data.json')
@@ -39,3 +39,4 @@ def get_data(url, alphabet=Any):
 def main():
     demo_data = get_data()
 if __name__ =='main':
+     main()
