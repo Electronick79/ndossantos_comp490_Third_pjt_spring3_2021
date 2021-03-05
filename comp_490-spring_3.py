@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 #import openpyxl
 
-df = pd.read_csv (r'Path where the CSV file is stored\COMP490_SPRING_3.XLSX')
+df = pd.read_csv(r'Path where the CSV file is stored\COMP490_SPRING_3.XLSX')
 print (df)
 
 
