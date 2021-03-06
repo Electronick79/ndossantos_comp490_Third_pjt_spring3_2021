@@ -101,13 +101,14 @@ for tb in mycursor:
         );
          """
     create_2016.repayment_3_yr_repayment.overall = """
-          CREATE TABLE 2016.repayment.3_yr_repayment.overall (
+            CREATE TABLE 2016.repayment.3_yr_repayment.overall (
             2016.repayment.3_yr_repayment.overall INT PRIMARY KEY,
             2016.repayment.3_yr_repayment.overall VARCHAR(40) NOT NULL,
             2016.repayment.3_yr_repayment.overall VARCHAR(40) NOT NULL,
 
           );
           """
+
     connection = create_db_connection("localhost", "root", pw, db)
     execute_query(connection, create_school.name)
     execute_query(connection, create_school.city)

@@ -1,5 +1,20 @@
 import sqlite3
+
+import mysql as mysql
 import pandas as pd
+
+# template that you can use to connect Python to SQL Server
+import pyodbc
+conn = pyodbc.connect('Driver={SQL Server};'
+                      'Server=server_name;'
+                      'Database=database_name;'
+                      'Trusted_Connection=yes;')
+
+cursor = conn.cursor()
+cursor.execute('SELECT * FROM database_name.table')
+
+for row in cursor:
+    print(row)
 
 mydb = mysql.connector.connect(
   host="localhost",
@@ -19,6 +34,9 @@ for db in db_cursor:
 
 df = pd.read_csv(r'Path where the XLSX file is stored\COMP490_SPRING_3.XLSX')
 print(df)
+df = pd.read_csv(r'C:\Users\Electronick\OneDrive\Desktop\COMP_490\COMP490_SPRING_3.xlsx')   #read the csv file (put 'r' before the path string to address any special characters in the path, such as '\').
+# Don't forget to put the file name at the end of the path + ".csv"
+print (df)
 
 conn = sqlite3.connect('TestDB.db')
 c = conn.cursor()
