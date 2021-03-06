@@ -30,13 +30,14 @@ db_cursor.execute("CREATE DATABASE comp490_spring_3")
 db_cursor.execute("SHOW DATABASES")
 #print all databases
 for db in db_cursor:
-	print(db)
+    print(db)
 
 df = pd.read_csv(r'Path where the XLSX file is stored\COMP490_SPRING_3.XLSX')
 print(df)
+
 df = pd.read_csv(r'C:\Users\Electronick\OneDrive\Desktop\COMP_490\COMP490_SPRING_3.xlsx')   #read the csv file (put 'r' before the path string to address any special characters in the path, such as '\').
-# Don't forget to put the file name at the end of the path + ".csv"
-print (df)
+# Don't forget to put the file name at the end of the path + ".xlsx or csv"
+print(df)
 
 conn = sqlite3.connect('TestDB.db')
 c = conn.cursor()
@@ -47,7 +48,7 @@ c.execute('''CREATE TABLE OCCUPATIONAL
 
 db_cursor.execute("SHOW TABLES")
 for table in db_cursor:
-	print(table)
+ print(table)
 
 # Create table - STATES
 c.execute('''CREATE TABLE STATES
@@ -55,7 +56,7 @@ c.execute('''CREATE TABLE STATES
 
 db_cursor.execute("SHOW TABLES")
 for table in db_cursor:
-	print(table)
+ print(table)
 
 # Create table - EMPLOYMENT
 c.execute('''CREATE TABLE EMPLOYMENT_STATUS
@@ -63,7 +64,7 @@ c.execute('''CREATE TABLE EMPLOYMENT_STATUS
 db_cursor.execute("SHOW TABLES")
 
 for table in db_cursor:
-	print(table)
+ print(table)
 
 # Create table - 25TH_PERCENTILE_SALARY
 c.execute('''CREATE TABLE 25TH_PERCENTILE_SALARY
@@ -71,7 +72,7 @@ c.execute('''CREATE TABLE 25TH_PERCENTILE_SALARY
 
 db_cursor.execute("SHOW TABLES")
 for table in db_cursor:
-	print(table)
+ print(table)
 
 
 conn.commit()
