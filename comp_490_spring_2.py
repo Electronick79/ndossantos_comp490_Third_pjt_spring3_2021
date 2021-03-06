@@ -1,8 +1,6 @@
 import mysql.connector
 import mysql.connector
 
-
-
 def create_server_connection(host_name, user_name, user_password):
     connection = None
     try:
